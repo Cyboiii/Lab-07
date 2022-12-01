@@ -1,0 +1,70 @@
+@import url(./reset.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --winning-blocks: pink;
+}
+
+
+body {
+    font-family: 'Finger Paint', cursive;
+}
+h1 {
+    color: fuchsia;
+  text-shadow: 0px 0px 9px pink;
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(#00076f, #44008b, #9f45b0, hotpink);;
+}
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button{
+padding: 10px 20px;
+border-radius: 10px;
+background-color: whitesmoke;
+color: crimson;
+border-color: pink;
+font-size: 18px;
+transition: 200ms transform;
+font-weight: 600;
+text-shadow: 0px 0px 10px crimson;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(3px);
+    text-shadow: 0px 0px 10px crimson;
+}
